@@ -22,4 +22,22 @@ Rails.application.routes.draw do
   patch "/patronus/:id", to: "patronus#update"
   delete "/patronus/:id", to: "patronus#destroy"
 
+ ## Wand Routes
+ get "/wands", to: "wands#index", as: "wands"
+ get "/wands/new", to: "wands#new"
+ post "/wands", to: "wands#create"
+ get "/wands/:id", to: "wands#show", as: "wand"
+ get "/wands/:id/edit", to: "wands#edit"
+ patch "/wands/:id", to: "wands#update"
+ delete "/wands/:id", to: "wands#destroy"
+
+ ## Spell Routes
+ get "/spells", to: "spells#index", as: "spells"
+ get "/spells/new", to: "spells#new"
+ post "/spells", to: "spells#create"
+ get "/spells/:id", to: "spells#show", as: "spell"
+ get "/spells/:id/edit", to: "spells#edit"
+ patch "/spells/:id", to: "spells#update"
+ delete "/spells/:id", to: "spells#destroy"
+ 
 end

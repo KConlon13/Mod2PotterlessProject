@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  wood: MyString
+  length: MyString
+  flexibility: MyString
+  core: MyString
+  user: one
+  spell: one
+
+two:
+  wood: MyString
+  length: MyString
+  flexibility: MyString
+  core: MyString
+  user: two
+  spell: two

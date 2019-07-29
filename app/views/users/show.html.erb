@@ -1,14 +1,30 @@
 <h1><%= @user.name %></h1>
 
-<p>House: <%= @user.house.name %></p>
+<p>House: <%= link_to @user.house.name, "/houses/#{@user.house.id}" %></p>
 <%= image_tag @user.house.logo_img_url %>
 
 <% @patronus.each do |patronu| %>
     <p>Patronus: <%= link_to patronu.animal, "/patronus/#{patronu.id}" %></p>
 <% end %>
+<br>
+<%= button_to "create patronus", "/patronus/new", method: :get %>
+<%= button_to "edit my patronus", "/patronus/#{@user.patronu.id}/edit", method: :get %>
 
 <br>
-<%= button_to "edit my patronus", "/patronus/#{@user.patronu.id}/edit", method: :get %>
+
+<p><u><b>Wand Info: </b></u></p>
+<% @wands.each do |wand| %>
+    <li><b>Wood: </b><%= wand.wood %></li>
+    <li><b>Core: </b><%= wand.core %></li>
+    <li><b>Length: </b><%= wand.length %></li>
+    <li><b>Flexibility: </b><%= wand.flexibility %></li>
+<% end %>
+<br>
+<% @wands.each do |wand| %>
+    <%= button_to "create wand", "/wands/new", method: :get %>
+    <%= button_to "edit wand", "/wands/#{wand.id}/edit", method: :get %>
+    <% end %>
+<br>
 <br>
 <br>
 <%= button_to "edit my profile", "/users/#{@user.id}/edit", method: :get %>

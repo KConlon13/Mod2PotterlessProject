@@ -7,6 +7,9 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @wands = Wand.all.select do |wand|
+      wand.user_id == @user.id
+    end
     @patronus = Patronu.all.select do |patronu|
       patronu.user_id == @user.id
     end
