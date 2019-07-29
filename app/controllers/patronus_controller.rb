@@ -11,6 +11,20 @@ class PatronusController < ApplicationController
   end
 
   def new
+    @patronu = Patronu.new
+    @users = User.all
+  end
+
+  def create
+    @users = User.all
+    @patronu = Patronu.new(patronu_params)
+    if @patronu.valid?
+      @patronu.save
+      redirect_to "/patronus/#{@patronu.id}"
+    else
+      flash.now[:message] = @patronu.errors.full_messages[0]
+      render :new
+    end
   end
 
   def edit

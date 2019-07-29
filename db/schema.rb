@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_29_134138) do
+ActiveRecord::Schema.define(version: 2019_07_29_172140) do
 
   create_table "houses", force: :cascade do |t|
     t.string "name"
@@ -30,6 +30,13 @@ ActiveRecord::Schema.define(version: 2019_07_29_134138) do
     t.index ["user_id"], name: "index_patronus_on_user_id"
   end
 
+  create_table "spells", force: :cascade do |t|
+    t.string "name"
+    t.string "purpose"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "username"
@@ -38,6 +45,19 @@ ActiveRecord::Schema.define(version: 2019_07_29_134138) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["house_id"], name: "index_users_on_house_id"
+  end
+
+  create_table "wands", force: :cascade do |t|
+    t.string "wood"
+    t.string "length"
+    t.string "flexibility"
+    t.string "core"
+    t.integer "user_id"
+    t.integer "spell_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["spell_id"], name: "index_wands_on_spell_id"
+    t.index ["user_id"], name: "index_wands_on_user_id"
   end
 
 end

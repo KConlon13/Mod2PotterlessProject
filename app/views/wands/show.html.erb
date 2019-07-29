@@ -1,0 +1,8 @@
+<h1>Examine Your Wand!</h1>
+
+<li>Wood: <%= @wand.wood %></li>
+<li>Length: <%= @wand.length %></li>
+<li>Flexibility: <%= @wand.flexibility %></li>
+<li>Core: <%= @wand.core %></li>
+
+<p><%= link_to "Back to Wizarding Profile", "/users/#{@wand.user_id}", method: :get %></p>

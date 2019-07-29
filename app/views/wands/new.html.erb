@@ -1,0 +1,27 @@
+<h1>Make Your Wand</h1>
+
+<% if flash.now[:message] %>
+<%= flash.now[:message] %>
+<% end %>
+
+<%= form_for @wand do |f|  %>
+<%= f.label :wood %>
+<%= f.collection_select(:wood, @wood, :to_s, :to_s, prompt: "Choose your wood type") %>
+<br>
+<%= f.label :length %>
+<%= f.collection_select(:length, @length, :to_s, :to_s, prompt: "Choose a wand length") %>
+<br>
+<%= f.label :flexibility %>
+<%= f.collection_select(:flexibility, @flexibility, :to_s, :to_s, prompt: "Choose your flexibility") %>
+<br>
+<%= f.label :core%>
+<%= f.collection_select(:core, @core, :to_s, :to_s, prompt: "Choose your core")  %>
+<br>
+<%= f.label "Wizard" %>
+<%= f.collection_select(:user_id, @users, :id, :name, prompt: "Choose Wizard") %>
+<br>
+<%= f.label "Make Some Magic" %>
+<%= f.collection_select(:spell_id, @spells, :id, :name, prompt: "Swish and flick!!") %>
+<br>
+<%= f.submit "submit"%>
+<% end %>

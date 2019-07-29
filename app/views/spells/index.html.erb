@@ -1,0 +1,8 @@
+<h1>Spells</h1>
+
+<% @spells.each do |spell| %>
+    <li><%= link_to spell.name, "/spells/#{spell.id}" %></li>
+    <br>
+<% end %>
+
+<%= button_to "Create Spell", "/spells/new", method: :get %>
