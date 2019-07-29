@@ -1,0 +1,10 @@
+<h1>Hogwarts Houses</h1>
+
+<% @houses.each do |house| %>
+    <li><%= link_to house.name, "/houses/#{house.id}" %></li>
+    <br>
+<% end %>
+
+<br>
+
+<audio src="https://ia800805.us.archive.org/4/items/11TheQuidditchMatch/2001%20-%20Harry%20Potter%20and%20The%20Sorcerer%27s%20Stone/19-HedwigsTheme.mp3" controls></audio>

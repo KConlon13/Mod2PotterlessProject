@@ -1,0 +1,6 @@
+<h1>All Patronuses</h1>
+
+<% @patronus.each do |patronu| %>
+    <li><%= link_to patronu.animal, "/patronus/#{patronu.id}" %></li>
+<% end %>
+

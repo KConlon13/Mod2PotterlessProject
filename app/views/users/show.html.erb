@@ -1,0 +1,16 @@
+<h1><%= @user.name %></h1>
+
+<p>House: <%= @user.house.name %></p>
+<%= image_tag @user.house.logo_img_url %>
+
+<% @patronus.each do |patronu| %>
+    <p>Patronus: <%= link_to patronu.animal, "/patronus/#{patronu.id}" %></p>
+<% end %>
+
+<br>
+<%= button_to "edit my patronus", "/patronus/#{@user.patronu.id}/edit", method: :get %>
+<br>
+<br>
+<%= button_to "edit my profile", "/users/#{@user.id}/edit", method: :get %>
+
+<%= button_to "delete my profile", "/users/#{@user.id}", method: :delete %>

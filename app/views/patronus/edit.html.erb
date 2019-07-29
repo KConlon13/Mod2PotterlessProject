@@ -1,0 +1,13 @@
+<h1>Edit Patronus</h1>
+
+<% if flash[:message] %>
+<%= flash[:message] %>
+<% end %>
+
+<%= form_for @patronu do |f| %>
+    <%= f.label :animal %>
+    <%= f.text_field :animal %>
+    <%= f.label :meaning %>
+    <%= f.text_area :meaning %>
+    <%= f.submit "submit" %>
+<% end %>

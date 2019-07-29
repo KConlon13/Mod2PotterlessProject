@@ -1,0 +1,2 @@
+module PatronusHelper
+end

@@ -1,0 +1,12 @@
+<h1>The <%= @patronu.animal %></h1>
+<p>"<%= @patronu.meaning %>"</p>
+
+<br>
+<p><b>Magical Celebrities Who Also Have This Patronus:</b></p>
+<% @users.each do |user| %>
+    <li><%= link_to user.name, "/users/#{user.id}" %></li>
+<% end %>
+
+<br>
+<br>
+<%= button_to "all patronuses", "/patronus", method: :get %>

@@ -1,0 +1,13 @@
+<h1>Hogwarts Students</h1>
+
+<% @users.each do |user| %>
+    <li><%= link_to user.name, "/users/#{user.id}" %></li>
+    <br>
+<% end %>
+
+<br>
+<p><b><u>View All Houses</u></b></p>
+<%= button_to "all houses", "/houses", method: :get %>
+<br>
+<p><b><u>View All Patronuses</u></b></p>
+<%= button_to "all patronuses", "/patronus", method: :get %>
