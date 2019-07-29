@@ -1,2 +1,8 @@
-<h1>Spells#index</h1>
-<p>Find me in app/views/spells/index.html.erb</p>
+<h1>Spells</h1>
+
+<% @spells.each do |spell| %>
+    <li><%= link_to spell.name, "/spells/#{spell.id}" %></li>
+    <br>
+<% end %>
+
+<%= button_to "Create Spell", "/spells/new", method: :get %>
