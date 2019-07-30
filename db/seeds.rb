@@ -23,14 +23,14 @@ The Hufflepuff dormitories and common room entrance 'is concealed in a stack of 
 
 ## User Seeding
 
-User.create!(name: "Kyle Conlon", username: "KyleConlon", password_digest: "kylespassword", house_id: 2)
-User.create!(name: "Rafia Khandaker", username: "RafiaKhandaker", password_digest: "rafiaspassword", house_id: 2)
-User.create!(name: "Harry Potter", username: "Expelliarmus4Lyfe", password_digest: "harryspassword", house_id: 1)
-User.create!(name: "Draco Malfoy", username: "SnakesRcool23", password_digest: "dracospassword", house_id: 3)
-User.create!(name: "Laura Conlon", username: "LauraConlon", password_digest: "lauraspassword", house_id: 4)
-User.create!(name: "Linda Conlon", username: "LindaConlon", password_digest: "lindaspassword", house_id: 4)
-User.create!(name: "Hermoine Granger", username: "BookWorm21", password_digest: "hermoinespassword", house_id: 1)
-User.create!(name: "Dwayne Perry", username: "Dwayne23", password_digest: "dwaynespassword", house_id: 3)
+User.create!(name: "Kyle Conlon", username: "KyleConlon", password: "kylespassword", house_id: 2)
+User.create!(name: "Rafia Khandaker", username: "RafiaKhandaker", password: "rafiaspassword", house_id: 2)
+User.create!(name: "Harry Potter", username: "Expelliarmus4Lyfe", password: "harryspassword", house_id: 1)
+User.create!(name: "Draco Malfoy", username: "SnakesRcool23", password: "dracospassword", house_id: 3)
+User.create!(name: "Laura Conlon", username: "LauraConlon", password: "lauraspassword", house_id: 4)
+User.create!(name: "Linda Conlon", username: "LindaConlon", password: "lindaspassword", house_id: 4)
+User.create!(name: "Hermoine Granger", username: "BookWorm21", password: "hermoinespassword", house_id: 1)
+User.create!(name: "Dwayne Perry", username: "Dwayne23", password: "dwaynespassword", house_id: 3)
 
 Patronu.create!(animal: "Lion", meaning: "The lion, along with being the mascot of Gryffindor House, is often seen as the “king of beasts.” Lions generally live in close-knit prides, which they are fiercely protective of. They are kind to cubs, sharing their food. These cats are fierce warriors, symbolizing bravery as well as strength and nobility. If your Patronus is the lion, you are likely brave, close to those in your inner circle, and extremely protective. Despite your fierceness when challenged, you have a soft spot for those weaker than yourself for whom you are willing to make sacrifices.", user_id: 2)
 Patronu.create!(animal: "Wolf", meaning: "Wolf Patronuses see their casters as part of their pack, and they are ready to defend them at any cost. Wolves have incredible instincts; they will attack all Dementors in the immediate vicinity and hunt down any stragglers remaining at a distance. No Dementor should cross a wolf Patronus – they are fierce protectors and loyal to their casters beyond any other guardian.", user_id: 1)
@@ -52,5 +52,10 @@ Spell.create!(name: "Wingardium Leviosa", purpose: "Makes things levitate")
 Spell.create!(name: "Accio", purpose: "Summons objects")
 Spell.create!(name: "Expecto Patronum", purpose: "Gets rid of pesky dementors")
 
-Wand.create!(wood: "Cherry", length: "10.5", flexibility: "Slightly bendy", core: "Dragon Heartstring", user_id: 1, spell_id: 1) 
-Wand.create!(wood: "Holly", length: "11", flexibility: "Nice and Supple", core: "Phoenix Feather", user_id: 3, spell_id: 9) 
+Wand.create!(wood: "Cherry", length: "10.5", flexibility: "Slightly bendy", core: "Dragon Heartstring", user_id: 1) 
+Wand.create!(wood: "Holly", length: "11", flexibility: "Nice and Supple", core: "Phoenix Feather", user_id: 3) 
+
+Casting.create!(user_id:5, spell_id:1)
+Casting.create!(user_id:6, spell_id:2)
+Casting.create!(user_id:7, spell_id:3)
+Casting.create!(user_id:8, spell_id:4)

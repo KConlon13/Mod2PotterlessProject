@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :authorized?, except: [:new, :create]
+
   def index
     @users = User.all
     @patronus = Patronu.all
@@ -9,6 +11,9 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @wands = Wand.all.select do |wand|
       wand.user_id == @user.id
+    end
+    @castings = Casting.all.select do |casting|
+        casting.user_id == @user.id
     end
     @patronus = Patronu.all.select do |patronu|
       patronu.user_id == @user.id
@@ -23,9 +28,10 @@ class UsersController < ApplicationController
   def create
     @houses = House.all
     @user = User.new(user_params)
+    session[:user_id] = @user.id
     if @user.valid?
       @user.save
-      redirect_to user_path(@user)
+      redirect_to "/login"
     else
       flash.now[:message] = @user.errors.full_messages[0]
       render :new
@@ -52,13 +58,14 @@ class UsersController < ApplicationController
 
   def destroy
     @user = User.find(params[:id])
+    session[:user_id] = nil
     @user.destroy
-    redirect_to users_path
+    redirect_to "/login"
   end
 
   private
 
   def user_params
-    params.require(:user).permit(:name, :username, :password_digest, :house_id)
+    params.require(:user).permit(:name, :username, :password, :house_id)
   end
 end

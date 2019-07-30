@@ -20,8 +20,5 @@
 <%= f.label "Wizard" %>
 <%= f.collection_select(:user_id, @users, :id, :name, prompt: "Choose Wizard") %>
 <br>
-<%= f.label "Make Some Magic" %>
-<%= f.collection_select(:spell_id, @spells, :id, :name, prompt: "Swish and flick!!") %>
-<br>
 <%= f.submit "submit"%>
 <% end %>

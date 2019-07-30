@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  #castings routes
+  get '/castings', to: 'castings#index', as: 'castings'
+  get '/castings/new', to: 'castings#new'
+  post '/castings', to: 'castings#create'
+  get '/castings/:id', to: 'castings#show', as: 'casting'
+  get '/castings/:id/edit', to: 'castings#edit', as: 'edit_casting'
+  patch '/castings/:id', to: 'castings#update'
+  delete '/castings/:id', to: 'castings#destroy'
+
 
   ## House Routes
   get "/houses", to: "houses#index", as: "houses"
@@ -6,7 +15,7 @@ Rails.application.routes.draw do
 
   ## User Routes
   get "/users", to: "users#index", as: "users"
-  get "/users/new", to: "users#new"
+  get "/signup", to: "users#new", as: 'signup'
   post "/users", to: "users#create"
   get "/users/:id", to: "users#show", as: "user"
   get "/users/:id/edit", to: "users#edit"
@@ -39,5 +48,11 @@ Rails.application.routes.draw do
  get "/spells/:id/edit", to: "spells#edit"
  patch "/spells/:id", to: "spells#update"
  delete "/spells/:id", to: "spells#destroy"
- 
+
+
+ #sessions routes
+ get '/login', to: 'sessions#new', as: 'login'
+ post '/sessions', to: 'sessions#create'
+ delete '/logout', to: 'sessions#destroy'
+
 end
