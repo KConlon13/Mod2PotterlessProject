@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_29_172140) do
+ActiveRecord::Schema.define(version: 2019_07_30_192949) do
+
+  create_table "castings", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "spell_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["spell_id"], name: "index_castings_on_spell_id"
+    t.index ["user_id"], name: "index_castings_on_user_id"
+  end
 
   create_table "houses", force: :cascade do |t|
     t.string "name"
@@ -53,10 +62,8 @@ ActiveRecord::Schema.define(version: 2019_07_29_172140) do
     t.string "flexibility"
     t.string "core"
     t.integer "user_id"
-    t.integer "spell_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["spell_id"], name: "index_wands_on_spell_id"
     t.index ["user_id"], name: "index_wands_on_user_id"
   end
 

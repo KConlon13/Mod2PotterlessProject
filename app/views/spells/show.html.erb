@@ -6,7 +6,3 @@
     <%= button_to "edit spell", "/spells/#{@spell.id}/edit", method: :get %>
 
     <%= button_to "delete spell", "/spells/#{@spell.id}", method: :delete %>
-
-<% @wands.each do |wand| %>
-    <%= link_to "user profile", "/users/#{wand.user_id}", method: :get %>
-<% end %>

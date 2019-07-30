@@ -12,7 +12,6 @@ class WandsController < ApplicationController
 
   def new
     @users = User.all
-    @spells = Spell.all
     @wand = Wand.new
     @wood = ['Acacia', 'Alder', 'Apple', 'Ash', 'Aspen', 'Beechwood', 'Blackthorn', 'Black Walnut', 'Cedar', 'Chestnut', 'Cypress', 'Dogwood', 'Ebony', 'Elder', 'Elm', 'Fir', 'Hawthorn', 'Hazel', 'Hornbeam', 'Mahogany', 'Maple', 'Oak', 'Poplar', 'Redwood', 'Rosewood', 'Willow', 'Yew']
     @length = ["9", "9.5", "10", "10.5", "11", "11.5", "12", "12.5", "13", "13.5",  "14", "14.5", "15"]
@@ -22,7 +21,6 @@ class WandsController < ApplicationController
 
   def create
     @users = User.all
-    @spells = Spell.all
     @wood = ['Acacia', 'Alder', 'Apple', 'Ash', 'Aspen', 'Beechwood', 'Blackthorn', 'Black Walnut', 'Cedar', 'Chestnut', 'Cypress', 'Dogwood', 'Ebony', 'Elder', 'Elm', 'Fir', 'Hawthorn', 'Hazel', 'Hornbeam', 'Mahogany', 'Maple', 'Oak', 'Poplar', 'Redwood', 'Rosewood', 'Willow', 'Yew']
     @length = ["9", "9.5", "10", "10.5", "11", "11.5", "12", "12.5", "13", "13.5",  "14", "14.5", "15"]
     @flexibility = ['Brittle','Bendy','Fairly Flexible','Inflexible', 'Nice and Flexible', 'Nice and Supple', 'Pliable', 'Quite Rigid', 'Quite Whippy', 'Rather Bendy', 'Reasonably Springy', '    Rigid', 'Slightly Bendy', 'Springy', 'Stiff', 'Swishy', 'Unyielding', 'Very Flexible', 'Whippy']
@@ -39,7 +37,6 @@ class WandsController < ApplicationController
 
   def edit
     @users = User.all
-    @spells = Spell.all
     @wood = ['Acacia', 'Alder', 'Apple', 'Ash', 'Aspen', 'Beechwood', 'Blackthorn', 'Black Walnut', 'Cedar', 'Chestnut', 'Cypress', 'Dogwood', 'Ebony', 'Elder', 'Elm', 'Fir', 'Hawthorn', 'Hazel', 'Hornbeam', 'Mahogany', 'Maple', 'Oak', 'Poplar', 'Redwood', 'Rosewood', 'Willow', 'Yew']
     @length = ["9", "9.5", "10", "10.5", "11", "11.5", "12", "12.5", "13", "13.5",  "14", "14.5", "15"]
     @flexibility = ['Brittle','Bendy','Fairly Flexible','Inflexible', 'Nice and Flexible', 'Nice and Supple', 'Pliable', 'Quite Rigid', 'Quite Whippy', 'Rather Bendy', 'Reasonably Springy', '    Rigid', 'Slightly Bendy', 'Springy', 'Stiff', 'Swishy', 'Unyielding', 'Very Flexible', 'Whippy']
@@ -49,7 +46,6 @@ class WandsController < ApplicationController
 
   def update
     @users = User.all
-    @spells = Spell.all
     @wood = ['Acacia', 'Alder', 'Apple', 'Ash', 'Aspen', 'Beechwood', 'Blackthorn', 'Black Walnut', 'Cedar', 'Chestnut', 'Cypress', 'Dogwood', 'Ebony', 'Elder', 'Elm', 'Fir', 'Hawthorn', 'Hazel', 'Hornbeam', 'Mahogany', 'Maple', 'Oak', 'Poplar', 'Redwood', 'Rosewood', 'Willow', 'Yew']
     @length = ["9", "9.5", "10", "10.5", "11", "11.5", "12", "12.5", "13", "13.5",  "14", "14.5", "15"]
     @flexibility = ['Brittle','Bendy','Fairly Flexible','Inflexible', 'Nice and Flexible', 'Nice and Supple', 'Pliable', 'Quite Rigid', 'Quite Whippy', 'Rather Bendy', 'Reasonably Springy', '    Rigid', 'Slightly Bendy', 'Springy', 'Stiff', 'Swishy', 'Unyielding', 'Very Flexible', 'Whippy']
@@ -68,6 +64,6 @@ class WandsController < ApplicationController
   private
 
   def wand_params
-    params.require(:wand).permit(:wood, :length, :flexibility, :core, :user_id, :spell_id)
+    params.require(:wand).permit(:wood, :length, :flexibility, :core, :user_id)
   end
 end

@@ -26,11 +26,7 @@
     <% end %>
     
 <p><u><b>Spell Book: </b></u></p>
-<% @wands.each do |wand| %>
-    <li><%= link_to wand.spell.name, "/spells/#{wand.spell.id}" %></li>
-<% end %>
-<br>
-<%= button_to "create a spell!", "/spells/new", method: :get %>
+
 <br>
 <br>
 <br>

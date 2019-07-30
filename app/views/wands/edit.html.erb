@@ -14,6 +14,5 @@
 <%= f.label :core%>
 <%= f.collection_select(:core, @core, :to_s, :to_s, prompt: "Choose your core")  %>
 <%= f.collection_select(:user_id, @users, :id, :name, prompt: true) %>
-<%= f.collection_select(:spell_id, @spells, :id, :name, prompt: true) %>
 <%= f.submit "submit"%>
 <% end %>
