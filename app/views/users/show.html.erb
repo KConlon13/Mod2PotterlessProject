@@ -26,7 +26,12 @@
     <% end %>
     
 <p><u><b>Spell Book: </b></u></p>
-
+ <% @castings.each do |casting| %>
+ <li><%= link_to casting.spell.name, "/spells/#{casting.spell.id}"  %></li>
+ <% end %>
+<br>
+<br>
+ <%= button_to 'cast a spell', "/castings/new", method: :get %>
 <br>
 <br>
 <br>

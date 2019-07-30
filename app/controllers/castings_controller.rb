@@ -33,7 +33,7 @@ class CastingsController < ApplicationController
     @casting = Casting.new(casting_params)
     if @casting.valid?
       @casting.save
-      redirect_to casting_path(@casting)
+      redirect_to "/users/#{session[:user_id]}"
     else
       flash.now[:message] = @casting.errors.full_messages[0]
       render :new

@@ -12,6 +12,9 @@ class UsersController < ApplicationController
     @wands = Wand.all.select do |wand|
       wand.user_id == @user.id
     end
+    @castings = Casting.all.select do |casting|
+        casting.user_id == @user.id
+    end
     @patronus = Patronu.all.select do |patronu|
       patronu.user_id == @user.id
     end
@@ -28,7 +31,7 @@ class UsersController < ApplicationController
     session[:user_id] = @user.id
     if @user.valid?
       @user.save
-      redirect_to user_path(@user)
+      redirect_to "/login"
     else
       flash.now[:message] = @user.errors.full_messages[0]
       render :new
@@ -55,8 +58,9 @@ class UsersController < ApplicationController
 
   def destroy
     @user = User.find(params[:id])
+    session[:user_id] = nil
     @user.destroy
-    redirect_to users_path
+    redirect_to "/login"
   end
 
   private

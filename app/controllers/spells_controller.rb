@@ -17,7 +17,7 @@ class SpellsController < ApplicationController
     @spell = Spell.new(spell_params)
     if @spell.valid?
       @spell.save
-      redirect_to spell_path(@spell)
+      redirect_to "/users/#{session[:user_id]}"
     else
       flash.now[:message] = @spell.errors.full_messages[0]
       render :new
