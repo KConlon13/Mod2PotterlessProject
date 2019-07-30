@@ -1,4 +1,6 @@
 class HousesController < ApplicationController
+  before_action :authorized? 
+
   def index
     @houses = House.all
   end

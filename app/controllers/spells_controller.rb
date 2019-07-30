@@ -1,4 +1,6 @@
 class SpellsController < ApplicationController
+  before_action :authorized? 
+
   def index
     @spells = Spell.all
   end

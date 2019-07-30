@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :authorized?, except: [:new, :create]
+
   def index
     @users = User.all
     @patronus = Patronu.all
@@ -23,6 +25,7 @@ class UsersController < ApplicationController
   def create
     @houses = House.all
     @user = User.new(user_params)
+    session[:user_id] = @user.id
     if @user.valid?
       @user.save
       redirect_to user_path(@user)
@@ -59,6 +62,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :username, :password_digest, :house_id)
+    params.require(:user).permit(:name, :username, :password, :house_id)
   end
 end

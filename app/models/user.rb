@@ -3,5 +3,7 @@ class User < ApplicationRecord
   has_many :spells, through: :wands
   has_one :patronu, :dependent => :destroy
   has_secure_password
-
+  validates :name, presence: true
+  validates :username, presence: true
+  validates :username, uniqueness: true
 end

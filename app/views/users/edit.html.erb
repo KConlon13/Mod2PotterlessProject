@@ -10,7 +10,7 @@
     <%= f.label :username %>
     <%= f.text_field :username %>
     <%= f.label :password %>
-    <%= f.password_field :password_digest %>
+    <%= f.password_field :password%>
     <%= f.label :house %>
     <%= f.collection_select(:house_id, @houses, :id, :name, prompt: "select your house!")%>
     <%= f.submit "update!" %>

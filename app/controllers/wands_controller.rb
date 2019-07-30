@@ -1,4 +1,7 @@
 class WandsController < ApplicationController
+  before_action :authorized? 
+
+
   def index
     @wands = Wand.all
   end
