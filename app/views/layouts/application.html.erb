@@ -7,42 +7,41 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+
     
+    
+
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+  
   <body>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" href="#">Navbar w/ text</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-              </li>
-            </ul>
-            <span class="navbar-text">
-              Navbar text with an inline element
-            </span>
-          </div>
-        </nav>
-    <% if logged_in? %>
-      <%= button_to 'log out', '/logout', method: :delete %>
-    <% end %>
-    <%= yield %>
+    <!-- Image and text -->
+    
+    
+    
+    
+    
+    <div class="btn-toolbar" id="charlie" role="toolbar" aria-label="Toolbar with button groups">
+
+      <a href="https://fontmeme.com/harry-potter-font/"><img src="https://fontmeme.com/permalink/190731/d7e5a810a8115e5cf0bd71ba2f7ee5ed.png" alt="harry-potter-font" border="0" height="100%"></a>
+
+      <div class="btn-group mr-2" role="group" aria-label="First group">
+          <button type="button" class="btn btn-secondary"> <%= button_to 'User Profile', "/users/#{session[:user_id]}", method: :get %>   </button>
+          <button type="button" class="btn btn-secondary"><%= button_to 'All Houses', "/houses", method: :get %>  </button>
+          <button type="button" class="btn btn-secondary"><%= button_to 'Logout', "/logout", method: :delete %>  </button>
+        </div>
+      </div>
+    
+      <%= yield %>
+      <% if logged_in? %>
+        <%= button_to 'log out', '/logout', method: :delete %>
+      <% end %>
     
   </body>
 

@@ -17,7 +17,7 @@
 <% if @patronus.count > 0 %>
     <% @patronus.each do |patronu| %>
 
-    <div class="button">
+    <div class="btn btn-secondary">
         <%= button_to "edit patronus", "/patronus/#{patronu.id}/edit", method: :get %>
     </div>
     <% end %>
@@ -62,6 +62,7 @@
 <br>
 <br>
 <br>
+<div class="button">
 <%= button_to "edit my profile", "/users/#{@user.id}/edit", method: :get %>
 </div>
 

@@ -14,7 +14,13 @@
  *= require_self
  */
 
+#charlie {
+  display: flex;
+  justify-content: space-between;
+  background-color: #d4e8e800;
+  font-family: 'Cinzel Decorative', cursive;
 
+}
 
  .button input {
   background-color: #6499d2;
@@ -22,7 +28,7 @@
 }
 
  p {
-   font-family: "Times New Roman", Times, serif;
+   font-family: 'Cinzel Decorative', cursive;
    font-weight: bold;
    font-size: 23px;
  }
@@ -33,6 +39,7 @@ li {
 
  body {
   background: url(http://i.imgur.com/CMWTqJx.jpg?1) no-repeat fixed center ;
+  font-family: 'Cinzel Decorative', cursive;
  }
 
  img {
