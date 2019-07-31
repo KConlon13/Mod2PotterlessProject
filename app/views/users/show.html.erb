@@ -8,12 +8,18 @@
 <% end %>
 
 <% if @patronus.count == 0 %>
+
+<div class="button">
     <%= button_to "create patronus", "/patronus/new", method: :get %>
+</div>
 <% end %>
 
 <% if @patronus.count > 0 %>
     <% @patronus.each do |patronu| %>
+
+    <div class="button">
         <%= button_to "edit patronus", "/patronus/#{patronu.id}/edit", method: :get %>
+    </div>
     <% end %>
 <% end %>
 
@@ -27,7 +33,9 @@
 <br>
 
 <% if @wands.count == 0 %>
+<div class="button">
     <%= button_to "create your wand!", "/wands/new", method: :get %>
+</div>
 <% end %>
 
 <% if @wands.count > 0 %>
