@@ -45,9 +45,12 @@
  <%= button_to 'cast a spell', "/castings/new", method: :get %>
 <br>
 <br>
-<br>
-<br>
 
+<audio src="https://ia800805.us.archive.org/4/items/11TheQuidditchMatch/2001%20-%20Harry%20Potter%20and%20The%20Sorcerer%27s%20Stone/19-HedwigsTheme.mp3" controls></audio>
+
+<br>
+<br>
+<br>
 <%= button_to "edit my profile", "/users/#{@user.id}/edit", method: :get %>
 
 <%= button_to "delete my profile", "/users/#{@user.id}", method: :delete %>
