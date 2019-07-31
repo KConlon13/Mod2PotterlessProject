@@ -2,11 +2,13 @@
 <p>"<%= @patronu.meaning %>"</p>
 
 <br>
-<p><b>Magical Celebrities Who Also Have This Patronus:</b></p>
+<p><b>All Wizards Who Have This Patronus:</b></p>
 <% @users.each do |user| %>
     <li><%= link_to user.name, "/users/#{user.id}" %></li>
 <% end %>
 
 <br>
 <br>
-<%= button_to "all patronuses", "/patronus", method: :get %>
+<%= button_to "see all patronuses", "/patronus", method: :get %>
+<br>
+<%= button_to "back to user profile", "/users/#{@patronu.user_id}", method: :get %>

@@ -6,16 +6,16 @@
 <% @patronus.each do |patronu| %>
     <p>Patronus: <%= link_to patronu.animal, "/patronus/#{patronu.id}" %></p>
 <% end %>
-<br>
 
-<div class="button">
-
+<% if @patronus.count == 0 %>
     <%= button_to "create patronus", "/patronus/new", method: :get %>
+<% end %>
 
-</div>
-
-
-<br>
+<% if @patronus.count > 0 %>
+    <% @patronus.each do |patronu| %>
+        <%= button_to "edit patronus", "/patronus/#{patronu.id}/edit", method: :get %>
+    <% end %>
+<% end %>
 
 <p><u><b>Wand Info: </b></u></p>
 <% @wands.each do |wand| %>
@@ -26,13 +26,15 @@
     <% end %>
 <br>
 
-<div class="button">
-<%= button_to "create your wand!", "/wands/new", method: :get %>
-</div>
+<% if @wands.count == 0 %>
+    <%= button_to "create your wand!", "/wands/new", method: :get %>
+<% end %>
 
-<% @wands.each do |wand| %>
-    <%= button_to "edit wand", "/wands/#{wand.id}/edit", method: :get %>
+<% if @wands.count > 0 %>
+    <% @wands.each do |wand| %>
+        <%= button_to "edit wand", "/wands/#{wand.id}/edit", method: :get %>
     <% end %>
+<% end %>
     
 <p><u><b>Spell Book: </b></u></p>
  <% @castings.each do |casting| %>

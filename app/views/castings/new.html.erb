@@ -4,6 +4,8 @@
 <%= flash[:message] %>
 <% end %>
 
+
+ 
 <%= form_for @casting do |f| %>
 <%= f.label :spells %>
 <%= f.collection_select(:spell_id, @spells, :id, :name, prompt: 'Choose your spell') %>

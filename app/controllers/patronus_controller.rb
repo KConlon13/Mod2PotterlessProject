@@ -32,14 +32,16 @@ class PatronusController < ApplicationController
 
   def edit
     @patronu = Patronu.find(params[:id])
+    @users = User.all
   end
 
   def update
+    @users = User.all
     @patronu = Patronu.find(params[:id])
     @patronu.update(patronu_params)
     if @patronu.valid?
       @patronu.save
-      redirect_to patronu_path(@patronu)
+      redirect_to "/patronus/#{@patronu.id}"
     else
       flash.now[:message] = @patronu.errors.full_messages[0]
       render :edit

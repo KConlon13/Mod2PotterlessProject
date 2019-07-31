@@ -21,7 +21,7 @@ class CastingsController < ApplicationController
     @casting.update(casting_params)
     if @casting.valid?
       @casting.save
-      redirect_to casting_path(@casting)
+      redirect_to "/users/#{session[:user_id]}"
     else
       flash.now[:message] = @casting.errors.full_messages[0]
       render :edit
@@ -35,10 +35,10 @@ class CastingsController < ApplicationController
       @casting.save
       redirect_to "/users/#{session[:user_id]}"
     else
-      flash.now[:message] = @casting.errors.full_messages[0]
+      flash.now[:message] = "You have already learned this spell!"
       render :new
     end
-  end
+  end 
 
   def destroy
     @casting = Casting.find(params[:id])
