@@ -13,3 +13,35 @@
  *= require_tree .
  *= require_self
  */
+
+
+
+ .button input {
+  background-color: #6499d2;
+  border-radius: 8px;
+}
+
+ p {
+   font-family: "Times New Roman", Times, serif;
+   font-weight: bold;
+   font-size: 23px;
+ }
+
+li {
+  color: green;
+}
+
+ body {
+  background: url(http://i.imgur.com/CMWTqJx.jpg?1) no-repeat fixed center ;
+ }
+
+ img {
+   border-radius: 8px;
+   opacity: .8;
+ }
+
+ div {
+   font-size: 20px;
+ }
+
+ 
