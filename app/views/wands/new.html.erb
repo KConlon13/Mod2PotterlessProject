@@ -17,8 +17,6 @@
 <%= f.label :core%>
 <%= f.collection_select(:core, @core, :to_s, :to_s, prompt: "Choose your core")  %>
 <br>
-<%= f.label "Wizard" %>
-<%= f.collection_select(:user_id, @users, :id, :name, prompt: "Choose Wizard") %>
-<br>
+<%= f.hidden_field :user_id, :value => session[:user_id] %>
 <%= f.submit "submit"%>
 <% end %>

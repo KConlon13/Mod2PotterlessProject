@@ -9,7 +9,6 @@
     <%= f.text_field :animal %>
     <%= f.label :meaning %>
     <%= f.text_area :meaning %>
-    <%= f.label :user %>
-    <%= f.collection_select(:user_id, @users, :id, :name, prompt: "Select User") %>
-    <%= f.submit "submit" %>
+    <%= f.hidden_field :user_id, :value => session[:user_id] %>
+    <%= f.submit "Create!" %>
 <% end %>

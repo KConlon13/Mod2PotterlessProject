@@ -13,6 +13,6 @@
 <%= f.collection_select(:flexibility, @flexibility, :to_s, :to_s, prompt: "Choose your flexibility") %>
 <%= f.label :core%>
 <%= f.collection_select(:core, @core, :to_s, :to_s, prompt: "Choose your core")  %>
-<%= f.collection_select(:user_id, @users, :id, :name, prompt: true) %>
+<%= f.hidden_field :user_id, :value => session[:user_id] %>
 <%= f.submit "submit"%>
 <% end %>
