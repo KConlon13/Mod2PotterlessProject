@@ -35,7 +35,7 @@ class CastingsController < ApplicationController
       @casting.save
       redirect_to "/users/#{session[:user_id]}"
     else
-      flash.now[:message] = @casting.errors.full_messages[0]
+      flash.now[:message] = "You have already learned this spell!"
       render :new
     end
   end 

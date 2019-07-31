@@ -3,6 +3,5 @@
     <li><%= @spell.purpose %></li>
 
     <br>
-    <%= button_to "edit spell", "/spells/#{@spell.id}/edit", method: :get %>
 
-    <%= button_to "delete spell", "/spells/#{@spell.id}", method: :delete %>
+    <%= button_to "back to user profile", "/users/#{session[:user_id]}", method: :get %>
