@@ -4,6 +4,7 @@
     <%= flash[:message] %>
 <% end %>
 
+<div class="textboxes">
 <%= form_for @user do |f| %>
     <%= f.label :name %>
     <%= f.text_field :name %>
@@ -15,3 +16,4 @@
     <%= f.collection_select(:house_id, @houses, :id, :name, prompt: "select your house!")%>
     <%= f.submit "Sign Up!" %>
 <% end %>
+</div>

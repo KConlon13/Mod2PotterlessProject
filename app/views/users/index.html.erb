@@ -12,3 +12,19 @@
 <p><b><u>View All Patronuses</u></b></p>
 <%= button_to "all patronuses", "/patronus", method: :get %>
 
+<br>
+<br>
+
+<p><b><u>Student Body Analysis</u></b></p>
+<h6>Number of Students in House Gryffindor</h6>
+<li><%= @users.where(["house_id = ?", "1"]).count %></li>
+<br>
+<h6>Number of Students in House Slytherin</h6>
+<li><%= @users.where(["house_id = ?", "3"]).count %></li>
+<br>
+<h6>Number of Students in House Hufflepuff</h6>
+<li><%= @users.where(["house_id = ?", "4"]).count %></li>
+<br>
+<h6>Number of Students in House Ravenclaw</h6>
+<li><%= @users.where(["house_id = ?", "2"]).count %></li>
+<br>

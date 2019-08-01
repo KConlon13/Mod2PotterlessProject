@@ -4,6 +4,7 @@
 <%= flash[:message] %>
 <% end %>
 
+<div class="textboxes">
 <%= form_for @patronu do |f| %>
     <%= f.label :animal %>
     <%= f.text_field :animal %>
@@ -12,3 +13,4 @@
     <%= f.hidden_field :user_id, :value => session[:user_id] %>
     <%= f.submit "Create!" %>
 <% end %>
+</div>

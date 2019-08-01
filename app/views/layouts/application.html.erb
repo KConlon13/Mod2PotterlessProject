@@ -12,9 +12,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative&display=swap" rel="stylesheet">
 
-    
-    
-
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap" rel="stylesheet">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -31,18 +29,18 @@
 
       <a href="https://fontmeme.com/harry-potter-font/"><img src="https://fontmeme.com/permalink/190731/d7e5a810a8115e5cf0bd71ba2f7ee5ed.png" alt="harry-potter-font" border="0" height="100%"></a>
 
-      <div class="btn-group mr-2" role="group" aria-label="First group">
-          <button type="button" class="btn btn-secondary"> <%= button_to 'User Profile', "/users/#{session[:user_id]}", method: :get %>   </button>
-          <button type="button" class="btn btn-secondary"><%= button_to 'All Houses', "/houses", method: :get %>  </button>
-          <button type="button" class="btn btn-secondary"><%= button_to 'Logout', "/logout", method: :delete %>  </button>
-        </div>
+      <div class="btn-group mr-2"  id="buttonbox" role="group" aria-label="First group">
+        <button type="button" class="btn btn-secondary"> <%= button_to 'User Profile', "/users/#{session[:user_id]}", method: :get %>   </button>
+        <button type="button" class="btn btn-secondary"><%= button_to 'All Houses', "/houses", method: :get %>  </button>
+        <button type="button" class="btn btn-secondary"><%= button_to 'Logout', "/logout", method: :delete %>  </button>
+      </div>
       </div>
     
       <%= yield %>
-      <% if logged_in? %>
+      <!-- <% if logged_in? %>
         <%= button_to 'log out', '/logout', method: :delete %>
       <% end %>
-    
+     -->
   </body>
 
 </html>

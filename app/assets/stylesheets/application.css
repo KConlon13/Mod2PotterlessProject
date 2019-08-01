@@ -1,30 +1,61 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
 
 #charlie {
   display: flex;
   justify-content: space-between;
   background-color: #d4e8e800;
   font-family: 'Cinzel Decorative', cursive;
-
+  padding: 0px 0px 10px 0px;
 }
 
- .button input {
-  background-color: #6499d2;
-  border-radius: 8px;
+#buttonbox {
+  height: 63px;
+}
+
+.lowerthree {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  padding: 80px 30px 60px 30px;
+}
+
+.hyperlinks li {
+  color: silver;
+}
+
+.hyperlinks a {
+  color: silver;
+  /* background: blue; */
+}
+
+#showpage_patronus {
+  padding: 65px;
+  border-radius: 0.3em;
+  background-color: #0e5865c7;
+}
+
+#showpage_wands {
+  background-color: #0e5865c7;
+  padding: 65px;
+  border-radius: 0.3em;
+}
+
+#showpage_wands > p {
+  text-shadow: white;
+}
+
+#showpage_spells {
+  padding: 65px;
+  border-radius: 0.3em;
+  background-color: #0e5865c7;
+}
+
+.usershowpage_profile_buttons {
+  display: flex;
+  padding: 50px 0px 0px 0px;
+}
+
+.textboxes {
+  font-family: 'Cormorant Garamond', serif;
 }
 
  p {
@@ -34,12 +65,13 @@
  }
 
 li {
-  color: green;
+  color: black;
 }
 
  body {
   background: url(http://i.imgur.com/CMWTqJx.jpg?1) no-repeat fixed center ;
   font-family: 'Cinzel Decorative', cursive;
+  margin: 8px;
  }
 
  img {
@@ -50,5 +82,3 @@ li {
  div {
    font-size: 20px;
  }
-
- 
