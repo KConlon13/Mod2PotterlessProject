@@ -50,8 +50,8 @@
         <div id="showpage_patronus">
             
 
-            <% @patronus.each do |patronu| %>
             <p><u> Patronus:</u></p>
+            <% @patronus.each do |patronu| %>
             <div class="hyperlinks">
             <li><%= link_to patronu.animal, "/patronus/#{patronu.id}" %></li>
             </div>

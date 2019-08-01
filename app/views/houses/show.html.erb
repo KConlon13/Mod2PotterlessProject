@@ -10,5 +10,5 @@
 
 <p><u>House Members: </u></p>
 <% @users.each do |user| %>
-   <div> <li><%= link_to user.name, "/users/#{user.id}" %></li> </div>
+   <div class="hyperlinks"> <li><%= link_to user.name, "/users/#{user.id}" %></li> </div>
 <% end %>
