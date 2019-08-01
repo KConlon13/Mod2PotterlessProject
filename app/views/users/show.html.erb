@@ -83,8 +83,12 @@
         <br>
         <br>
 
- <div class="usershowpage_profile_buttons">
-     <div class="button">
+    <div class="usershowpage_profile_buttons">
+        <div class="button">
+            <%= button_to "All Users", "/users", method: :get %>
+        </div>
+
+        <div class="button">
          <%= button_to "edit my profile", "/users/#{@user.id}/edit", method: :get %>
         </div>
         
