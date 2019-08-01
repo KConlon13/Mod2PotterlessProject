@@ -82,3 +82,57 @@ li {
  div {
    font-size: 20px;
  }
+
+ .students {
+ 
+ }
+
+ #student_box {
+
+}
+
+.analysis{
+  margin: 0;
+  margin-top: 5em;
+  bottom: 1em;
+}
+ .analysis div{
+  /* display: flex;
+  justify-content: space-around; */
+  vertical-align: top;
+  max-width: 20%;
+  min-height: 10em;
+  float: left;
+  margin: 0 1em;
+  text-align: center;
+
+}
+
+ #house_and_more {
+
+}
+
+.analysis > #box1 {
+  border-radius: 0.3em;
+  background-color: #0e5865c7;
+  padding-top: 60px;
+  opacity: 0.7;
+}
+.analysis > #box2 {
+  border-radius: 0.3em;
+  background-color: #0e5865c7;
+  padding-top: 60px;
+  opacity: 0.7;
+}
+.analysis > #box3 {
+  border-radius: 0.3em;
+  background-color: #0e5865c7;
+  padding-top: 60px;
+  opacity: 0.7;
+}
+.analysis > #box4 {
+ border-radius: 0.3em;
+  background-color: #0e5865c7;
+  padding-top: 60px;
+  opacity: 0.7;
+}
