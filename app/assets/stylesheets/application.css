@@ -74,9 +74,8 @@ li {
   margin: 8px;
  }
 
- img {
+ .img {
    border-radius: 8px;
-   opacity: .8;
  }
 
  div {

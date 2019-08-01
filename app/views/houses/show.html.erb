@@ -1,9 +1,9 @@
-<h1><%= @house.name %></h1>
+<h1><%= @house.name %> House</h1>
 
 <p><u> Motto: </u></p>
  <p> <%= @house.motto %> </p>
 
-<p><%= image_tag @house.logo_img_url %></p>
+<img src="<%=@house.logo_img_url%>" alt="House Sigil" length="450" width="400">
 
 <p><u>Description: </u></p>
    <p> <%= @house.description %></p>
