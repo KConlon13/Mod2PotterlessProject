@@ -27,16 +27,42 @@
   /* background: blue; */
 }
 
+.allusers_hyperlinks a {
+  color: rgba(154, 16, 16, 0.817);
+  display: inline; 
+  margin-left: 1em;
+  text-align: left;
+}
+
+.housedescription p {
+  background-color: white;
+  opacity: 0.9;
+  border-radius: 0.3em;
+  padding-left: 7px;
+  box-shadow: 9px 7px 10px black;
+  text-shadow: 3px 0px 16px black;
+}
+
+.housemembers_hyperlinks a {
+  color: black;
+  background-color: white;
+  border-radius: 0.2em;
+  opacity: 0.8;
+  text-shadow: 5px 7px 8px black;
+}
+
 #showpage_patronus {
   padding: 65px;
   border-radius: 0.3em;
   background-color: #0e5865c7;
+  box-shadow: 9px 10px 20px black;
 }
 
 #showpage_wands {
   background-color: #0e5865c7;
   padding: 65px;
   border-radius: 0.3em;
+  box-shadow: 9px 10px 20px black;
 }
 
 #showpage_wands > p {
@@ -47,6 +73,7 @@
   padding: 65px;
   border-radius: 0.3em;
   background-color: #0e5865c7;
+  box-shadow: 9px 10px 20px black;
 }
 
 .usershowpage_profile_buttons {
@@ -87,17 +114,23 @@ li {
  }
 
  #student_box {
-
+  background-color: #ece2d2;
+  border-radius: 0.3em;
+  opacity: 0.85;
+  width: 100vw;
+  margin-left: -0.4em;
+  box-shadow: 0px 9px 11px black;
+  padding-bottom: 15px;
 }
 
-.analysis{
+.analysis {
+  display: flex;
+  justify-content: space-evenly;
   margin: 0;
-  margin-top: 5em;
+  margin-top: 4em;
   bottom: 1em;
 }
  .analysis div{
-  /* display: flex;
-  justify-content: space-around; */
   vertical-align: top;
   max-width: 20%;
   min-height: 10em;
@@ -108,30 +141,38 @@ li {
 }
 
  #house_and_more {
-
+  padding-top: 31px;
 }
 
 .analysis > #box1 {
   border-radius: 0.3em;
-  background-color: #0e5865c7;
-  padding-top: 60px;
+  background-color: #0e5865;
+  padding-top: 41px;
   opacity: 0.7;
+  margin-bottom: 20px;
+  box-shadow: 9px 10px 7px black;
 }
 .analysis > #box2 {
   border-radius: 0.3em;
-  background-color: #0e5865c7;
-  padding-top: 60px;
+  background-color: #0e5865;
+  padding-top: 41px;
   opacity: 0.7;
+  margin-bottom: 20px;
+  box-shadow: 9px 10px 7px black;
 }
 .analysis > #box3 {
   border-radius: 0.3em;
-  background-color: #0e5865c7;
-  padding-top: 60px;
+  background-color: #0e5865;
+  padding-top: 41px;
   opacity: 0.7;
+  margin-bottom: 20px;
+  box-shadow: 9px 10px 7px black;
 }
 .analysis > #box4 {
- border-radius: 0.3em;
-  background-color: #0e5865c7;
-  padding-top: 60px;
+  border-radius: 0.3em;
+  background-color: #0e5865;
+  padding-top: 41px;
   opacity: 0.7;
+  margin-bottom: 20px;
+  box-shadow: 9px 10px 7px black;
 }

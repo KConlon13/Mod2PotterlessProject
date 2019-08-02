@@ -4,9 +4,11 @@
     <div id="student_box">
         <h1>Hogwarts Students</h1>
 
+        <div class="allusers_hyperlinks">
         <% @users.each do |user| %>
-            <li style="display: inline; margin-left: 1em;"><%= link_to user.name, "/users/#{user.id}" %></li>
-        <% end %>
+                <%= link_to user.name, "/users/#{user.id}" %>
+                <% end %>
+        </div>
     </div>
 
     

@@ -6,9 +6,13 @@
 <img src="<%=@house.logo_img_url%>" alt="House Sigil" length="450" width="400">
 
 <p><u>Description: </u></p>
-   <p> <%= @house.description %></p>
+   <div class="housedescription">
+      <p> <%= @house.description %></p>
+   </div>
 
 <p><u>House Members: </u></p>
+<div class="housemembers_hyperlinks">
 <% @users.each do |user| %>
-   <div class="hyperlinks"> <li><%= link_to user.name, "/users/#{user.id}" %></li> </div>
+ <li>   <%= link_to user.name, "/users/#{user.id}" %>   </li>
 <% end %>
+</div>
