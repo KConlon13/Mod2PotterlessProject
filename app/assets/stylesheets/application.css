@@ -153,7 +153,10 @@ li {
   float: left;
   margin: 0 1em;
   text-align: center;
+}
 
+.analysis li {
+  color: white;
 }
 
  #house_and_more {
@@ -164,39 +167,51 @@ li {
   border-radius: 0.3em;
   padding-top: 41px;
   margin-bottom: 20px;
-  /* box-shadow: -16px 12px 5px #7d1212d9, 14px -2px 5px #7d1212d9, -17px -10px 5px #7d1212d9, -11px -15px 5px #7d1212d9, 17px 11px 7px #7d1212d9, 18px -17px 5px #7d1212d9; */
-  background-color: #7d1212d9;
-  box-shadow: 9px 10px 7px black;
+  background-color: #1f3535;
+  box-shadow: 9px 10px 7px #880f0fc4;
   text-shadow: 1px 1px 3px white;
   color: white;
 }
+
+
 .analysis > #box2 {
-  border-radius: 0.3em;
-  background-color: #207120d6;
+  background-color: #1f3535;
   padding-top: 41px;
-  /* opacity: 0.7; */
   margin-bottom: 20px;
-  box-shadow: 9px 10px 7px black;
+  box-shadow: 9px 10px 7px #2e6b05ba;
   text-shadow: 1px 1px 3px white;
   color: white;
 }
 .analysis > #box3 {
   border-radius: 0.3em;
-  background-color: #a5a517d1;
+  background-color: #1f3535;
   padding-top: 41px;
-  /* opacity: 0.7; */
   margin-bottom: 20px;
-  box-shadow: 9px 10px 7px black;
+  box-shadow: 9px 10px 7px #96810775;
   text-shadow: 1px 1px 3px white;
   color: white;
 }
 .analysis > #box4 {
   border-radius: 0.3em;
-  background-color: #1d1d7fd6;
+  background-color: #1f3535;
   padding-top: 41px;
-  /* opacity: 0.7; */
   margin-bottom: 20px;
-  box-shadow: 9px 10px 7px black;
+  box-shadow: 9px 10px 7px #0b3377cc;
   text-shadow: 1px 1px 3px white;
   color: white;
+}
+
+.all_patronuses {
+  padding-top: 20px;
+}
+
+.all_patronuses a {
+  text-size-adjust: 10px;
+  color: white;
+  background-color: rgba(8, 37, 37, 0.64);
+  box-shadow: 3px 3px 2px black;
+  text-shadow: 1px 1px 1px black;
+  opacity: 0.8;
+  padding: 3px;
+  border-radius: 0.1em;
 }
