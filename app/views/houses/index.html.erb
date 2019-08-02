@@ -1,8 +1,10 @@
 <h1>Hogwarts Houses</h1>
 
-<% @houses.each do |house| %>
+<div class="house_names">
+    <% @houses.each do |house| %>
     <li><%= link_to house.name, "/houses/#{house.id}" %></li>
     <br>
-<% end %>
+    <% end %>
+</div>
 
 
