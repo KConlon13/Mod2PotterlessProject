@@ -14,9 +14,11 @@
             <% end %>
             <br>
             <br>
+        <% if session[:user_id] == @user.id %>
             <div class="button">
                 <%= button_to 'cast a spell', "/castings/new", method: :get %>
             </div>
+        <% end %>
         </div>
 
         
@@ -33,16 +35,18 @@
             </div>
             <br>
             
-            <% if @wands.count == 0 %>
-            <div class="button">
-                <%= button_to "create your wand!", "/wands/new", method: :get %>
-            </div>
-            <% end %>
-            
-            <% if @wands.count > 0 %>
-            <% @wands.each do |wand| %>
-            <%= button_to "edit wand", "/wands/#{wand.id}/edit", method: :get %>
-            <% end %>
+            <% if session[:user_id] == @user.id %>
+                <% if @wands.count == 0 %>
+                <div class="button">
+                    <%= button_to "create your wand!", "/wands/new", method: :get %>
+                </div>
+                <% end %>
+                
+                <% if @wands.count > 0 %>
+                <% @wands.each do |wand| %>
+                <%= button_to "edit wand", "/wands/#{wand.id}/edit", method: :get %>
+                <% end %>
+                <% end %>
             <% end %>
         </div>
         
@@ -59,17 +63,18 @@
             <br>
             <br>
 
-            <% if @patronus.count == 0 %>
-            
-            <div class="button">
-                <%= button_to "create patronus", "/patronus/new", method: :get %>
-            </div>
-            <% end %>
-            
-            <% if @patronus.count > 0 %>
-            <% @patronus.each do |patronu| %>
-                <%= button_to "edit patronus", "/patronus/#{patronu.id}/edit", method: :get %>
-            <% end %>
+            <% if session[:user_id] == @user.id %>
+                <% if @patronus.count == 0 %>
+                <div class="button">
+                    <%= button_to "create patronus", "/patronus/new", method: :get %>
+                </div>
+                <% end %>
+                
+                <% if @patronus.count > 0 %>
+                <% @patronus.each do |patronu| %>
+                    <%= button_to "edit patronus", "/patronus/#{patronu.id}/edit", method: :get %>
+                <% end %>
+                <% end %>
             <% end %>
         </div>
     </div>
@@ -87,7 +92,7 @@
         <div class="button">
             <%= button_to "All Users", "/users", method: :get %>
         </div>
-
+        <% if session[:user_id] == @user.id %>
         <div class="button">
          <%= button_to "edit my profile", "/users/#{@user.id}/edit", method: :get %>
         </div>
@@ -95,4 +100,5 @@
         <div class="button">
             <%= button_to "delete my profile", "/users/#{@user.id}", method: :delete %>
         </div>
+        <% end %>
     </div>       
