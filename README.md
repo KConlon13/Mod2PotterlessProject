@@ -24,6 +24,10 @@ Features:
 -While signing up, an artist can link their social media to their profile if they choose to
 -Users can toggle between the home page and a specific artists profile page via the navigation bar
 
+SCREENSHOTS
+
+<img width="1283" alt="Screen Shot 2019-10-18 at 11 33 10 AM" src="https://user-images.githubusercontent.com/47828048/67108339-4d903780-f19c-11e9-9842-930c2910fd1d.png">
+
 INSTALLATION
 -In the command line, run: 
   1. rails db:migrate
