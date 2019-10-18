@@ -26,6 +26,8 @@ SCREENSHOTS
 
 <img width="1285" alt="Screen Shot 2019-10-18 at 11 33 38 AM" src="https://user-images.githubusercontent.com/47828048/67108479-9942e100-f19c-11e9-90ae-a7968c27cbf7.png">
 
+<img width="1281" alt="Screen Shot 2019-10-18 at 11 46 13 AM" src="https://user-images.githubusercontent.com/47828048/67108644-ef178900-f19c-11e9-89b5-e46f6ce29e76.png">
+
 <img width="1283" alt="Screen Shot 2019-10-18 at 11 34 14 AM" src="https://user-images.githubusercontent.com/47828048/67108498-a5c73980-f19c-11e9-88e4-6c284f917007.png">
 
 INSTALLATION
