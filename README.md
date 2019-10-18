@@ -10,7 +10,8 @@ We wanted to put our newfound skills in Ruby on Rails to the test and create an 
 BUILD STATUS: Complete
 
 TECH/FRAMEWORKS USED
-Built with: Ruby on Rails, HTML, CSS, and Bootstrap UI
+
+Ruby on Rails, HTML, CSS, and Bootstrap UI
 
 Features:
 -Companies can view all artists
