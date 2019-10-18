@@ -9,11 +9,7 @@ We wanted to put our newfound skills in Ruby on Rails to the test and create an 
 BUILD STATUS: Complete
 
 TECH/FRAMEWORKS USED
-Built with:
--Ruby on Rails
--HTML
--CSS
--Bootstrap UI
+Built with: Ruby on Rails, HTML, CSS, and Bootstrap UI
 
 Features:
 -Companies can view all artists
@@ -27,6 +23,10 @@ Features:
 SCREENSHOTS
 
 <img width="1283" alt="Screen Shot 2019-10-18 at 11 33 10 AM" src="https://user-images.githubusercontent.com/47828048/67108339-4d903780-f19c-11e9-9842-930c2910fd1d.png">
+
+<img width="1285" alt="Screen Shot 2019-10-18 at 11 33 38 AM" src="https://user-images.githubusercontent.com/47828048/67108479-9942e100-f19c-11e9-90ae-a7968c27cbf7.png">
+
+<img width="1283" alt="Screen Shot 2019-10-18 at 11 34 14 AM" src="https://user-images.githubusercontent.com/47828048/67108498-a5c73980-f19c-11e9-88e4-6c284f917007.png">
 
 INSTALLATION
 -In the command line, run: 
