@@ -1,28 +1,32 @@
 # Potterless
 A lighthearted attempt at replicating the Pottermore website for a customizable and interactive Harry Potter World experience
 
-MOTIVATION
+## Motivation
 
 The Wizarding World (aka Warner Bros) have done an incredible job creating interactive platforms to keep Harry Potter fans satisfied for years now- whether it be the immersive amusement park in Universal Studios, the epic movie and book series, or their online presence... namely the Pottermore website. One visit to that website will have any users impressed by the amount of user interactivity it provides. 
 This inspired the building of Potterless (the name implying it provides some Harry Potter fun but not any more than Pottermore)
 We wanted to put our newfound skills in Ruby on Rails to the test and create an engaging and themed experience that could (almost) rival or imitate what the Pottermore website does so successfully.
 
-BUILD STATUS: Complete
+## Build Status
 
-TECH/FRAMEWORKS USED
+Complete
+
+## Tech/Frameworks Used
 
 Ruby on Rails, HTML, CSS, and Bootstrap UI
 
-Features:
--Companies can view all artists
--Companies may sort through all artists based on what their art style is (graffiti, street art, urban contemporary, etc)
--Companies can click on a specific artists card to view their profile page with more details about them
--Companies can contact an artist by email, phone, social media, or their personal website
--Artists can sign up, log in, and log out
--While signing up, an artist can link their social media to their profile if they choose to
--Users can toggle between the home page and a specific artists profile page via the navigation bar
+## Features
+-Users can log in, sign up, or log out
 
-SCREENSHOTS
+-Users can choose which house they would like to sorted into, create their own want, cast spells with that wand, view all spells they have cast in their spell book, and discover their patronus
+
+-Users can play the Harry Potter theme music via an audio player at the bottom of the page
+
+-Users can view other Hogwarts Houses and other students in those houses
+
+-Users can view all spells, all student profile pages, and all patronuses
+
+## Screenshots
 
 <img width="1283" alt="Screen Shot 2019-10-18 at 11 33 10 AM" src="https://user-images.githubusercontent.com/47828048/67108339-4d903780-f19c-11e9-9842-930c2910fd1d.png">
 
@@ -32,7 +36,7 @@ SCREENSHOTS
 
 <img width="1283" alt="Screen Shot 2019-10-18 at 11 34 14 AM" src="https://user-images.githubusercontent.com/47828048/67108498-a5c73980-f19c-11e9-88e4-6c284f917007.png">
 
-CODE EXAMPLES
+## Code Examples
 
 <img width="1439" alt="Screen Shot 2019-10-18 at 12 16 05 PM" src="https://user-images.githubusercontent.com/47828048/67110757-7666fb80-f1a1-11e9-8117-ff8af050216d.png">
 
@@ -41,13 +45,13 @@ CODE EXAMPLES
 <img width="1440" alt="Screen Shot 2019-10-18 at 12 18 25 PM" src="https://user-images.githubusercontent.com/47828048/67110777-7c5cdc80-f1a1-11e9-86b3-3df241dae909.png">
 
 
-INSTALLATION
--In the command line, run: 
+## Installation
+In the command line, run: 
   1. rails db:migrate
   2. rails db:seed
   3. rails s (will be running on localhost:3000)
 
-How to use?
+## How to Use
 
 1. Create an Account or Log in
 2. View Your Profile Page
@@ -60,5 +64,5 @@ How to use?
 9. View all other Hogwarts Students and their profile information
 10. Log out or delete user profile
 
-CREDITS
+## CREDITS
 Contibutors: Kyle Conlon & Philip Smalls
